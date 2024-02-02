@@ -16,6 +16,7 @@ pipeline {
     stage('Build and Test') {
       steps {
         // build the project and downloading all dependecies file present in pom.xml file and create a JAR file (artifactory) 
+        // The packaged artifact (e.g., JAR or WAR file) is placed in the target directory of the project
         sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package'
       }
     }
